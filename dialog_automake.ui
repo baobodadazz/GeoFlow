@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_automake</class>
+ <widget class="QDialog" name="Dialog_automake">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1186</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>计算特征点参数设置</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>特征点算子:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="comboBox_describer">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>SIFT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SIFT_ANATOMY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>AKAZE_FLOAT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>AKAZE_MLDB</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>特征点质量:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="comboBox_quality">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>高品质</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>极高品质</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="2">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>（极高品质可能会花费非常长的时间）</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>计算特征空间向量:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QComboBox" name="comboBox_upright">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>否</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>是</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>（旋转的特征标志）</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>特征暴力计算:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="comboBox_forcecompute">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>否</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>是</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="2">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>（开启后，若找不到特征，则强制取距离最近的点）</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QLabel" name="label_10">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>匹配特征点参数设置</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>几何模型:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QComboBox" name="comboBox_geometricmodel">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>fundamental matrix</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>esential matrix</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>homography matrix</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>essential matrix with an angular parametrization</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>orthographic essential matrix</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>upright essential matrix</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_13">
+     <property name="text">
+      <string>距离比率:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="lineEdit_distanceRatio">
+     <property name="text">
+      <string>0.8</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2" colspan="2">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>（舍弃无意义匹配点的距离比率，使用0.6或更低比率可以减少误报）</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>暴力匹配:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QComboBox" name="comboBox_forcematch">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>否</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>是</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="2" colspan="2">
+    <widget class="QLabel" name="label_12">
+     <property name="text">
+      <string>（开启后，匹配不到特征会强制重算数据）</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="2">
+    <widget class="QLabel" name="label_25">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>三维重建参数设置</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="label_22">
+     <property name="text">
+      <string>空中三角测量方法:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QComboBox" name="comboBox_triangulationMethod">
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>DIRECT_LINEAR_TRANSFORM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>L1_ANGULAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LINFINITY_ANGULAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>INVERSE_DEPTH_WEIGHTED_MIDPOINT</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="label_23">
+     <property name="text">
+      <string>计算后方交会方法:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QComboBox" name="comboBox_resectionMethod">
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>DLT_6POINTS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P3P_KE_CVPR17</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P3P_KNEIP_CVPR11</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P3P_NORDBERG_ECCV18</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>UP2P_KUKELOVA_ACCV10</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label_21">
+     <property name="text">
+      <string>纹理模型输出格式:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>ply</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>obj</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>osgb</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="13" column="0" colspan="2">
+    <widget class="QLabel" name="label_18">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>工程路径参数设置</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="label_15">
+     <property name="text">
+      <string>源图片路径:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <widget class="QLineEdit" name="lineEdit_inputDir"/>
+   </item>
+   <item row="14" column="2">
+    <widget class="QPushButton" name="pushButton_browseInputDir">
+     <property name="text">
+      <string>浏览</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0">
+    <widget class="QLabel" name="label_16">
+     <property name="text">
+      <string>相机本征矩阵:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="1">
+    <widget class="QLineEdit" name="lineEdit_kMatrix">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="2">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>(可忽略)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="3">
+    <widget class="QLabel" name="label_19">
+     <property name="text">
+      <string>输入格式: f;0;ppx;0;f;ppy;0;0;1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0">
+    <widget class="QLabel" name="label_20">
+     <property name="text">
+      <string>工程输出路径:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="1">
+    <widget class="QLineEdit" name="lineEdit_OutputDir"/>
+   </item>
+   <item row="16" column="2">
+    <widget class="QPushButton" name="pushButton_browseOutputDir">
+     <property name="text">
+      <string>浏览</string>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="1">
+    <widget class="QWidget" name="widget" native="true">
+     <widget class="QPushButton" name="btn_CANCEL">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>20</y>
+        <width>105</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_OK">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>106</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>确定</string>
+      </property>
+     </widget>
+     <zorder>btn_CANCEL</zorder>
+     <zorder>frame</zorder>
+     <zorder>btn_OK</zorder>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
